@@ -1,12 +1,12 @@
 # PROJECT-KAGGLE
-Este proyecto consiste en coger una dataset de kaggle, y a través de feature engineering y limpieza, buscar un modelo de machine learning que dé el error cuadrado medio mínimo posible.
+This project was a competition between the 26 members of my class. With a dataset from Kaggle about different diamond features, we had to obtain through feature engineering and data cleaning the a model for the prediction of the diamonds prices with the lowest root mean squared error (rmse) possible. For my class I was the one to obtain the lowest rmse, winning the first prize.
 ![alt text](https://d500.epimg.net/cincodias/imagenes/2021/06/25/companias/1624630363_897564_1624630510_noticia_normal.jpg "Logo Title Text 1")
 
-### Primer paso: Limpieza y feature engineering
-El primer paso era abrir el dataset y ver cuáles eran los datos. Nos encontramos con muchos categóricos, para los cuáles me tuve que meter en internet para saber el orden que tenían cada uno y poder asignarles un valor. Lo siguiente era mirar la correlación de cada una de las variables, para detectaar así colinealidad. Inicialmente boorraremoss las tres variables con una alta correlación, aunque luego veremos que esto empeora nuestro modelo.
-### Segundo paso: Probar modelos
-Lo siguiente que habrá que hacer es probar distintos modelos a ver cuál nos da el error cuadrado medio más bajo. Comenzaremos por un modelo de regresión lineal, dado que es el primero y más simple que hemos visto. Vemos que da un error muy alto, asi que pasaremos a probar con Ridge(), Lasso(), SGDRegressor(), KNeighborsRegressor(), y GradientBoostingRegressor(). El último de estos dará un error notablemente inferior al resto, por lo que de momento será nuestro mejor modelo. Es en este punto dónde decido probar a quitar columnas o dejarlas y a estandarizar o normalizar los datos de la columna 'table' y 'depth'. Tras mucho ensayp y error, parece que lo óptimo es dejarlo como está.
-Continuo mi investigación con modelos de random forest, para hacer arboles de decisión. Aquí vuelven a mejorar nootablemente los resultados, y probando distintas cosas con los parámetros acabo con un rmse de 562. Finalmente decido investigar con la librería h2o que me exige conectarme a java. Probando distintas extensiones de la librería, acabo descrubiendo que la más útli será auto ML, dado que va a probar con numerosos modelos a la vez y puedo seleccionar que me dé aquel con menor rmse. Aquí me tocó probar de nuevo con distintos trains, para ver cual me daaba un modelo más ajustado.
-### Tercer paso: Exportar resultados y subirlos
-Había que hacer un csv con las predicciones de precio y el id del diamante, y subrilo a kaggle, ahí te daría el rmse real.
+### First step: Data cleaning and feature engineering
+The first step was to open the dataset and explore the data. There were many categorical features, which gave information about the quality of the diamonds. To interpret these features and classify them with the according values, I had to go to the internet. Next I had to study the possible autocorrelation between variables, detecting possible colineality.
+
+### Second step: Trying different models
+I started trying different models to see with which one I obtained the lowest rmse. My first model was a linear regression one, as it is the simplest of the ones I have studied, however the high rmse obtained told me this was not the way to proceed. The next ones I tried were Ridge(), Lasso(), SGDRegressor(), KNeighborsRegressor(), and GradientBoostingRegressor(). The last one of these gave back a significantly lower rmse, so here is where I started trying to take out different columns or standarizing data to see the effects on the model's precison. I then proceeded with Random Forest  and XGBoost models and trying different feature engineering methonds and messing with Hyperparametres, I finally ended up with a rmse of 562.
+Finally, I decided to try H2o, and the AutoML library. This would give automatically the model with the lowest rmse.
+
 
