@@ -1,5 +1,5 @@
 # PROJECT-KAGGLE
-This project was a competition between the 26 members of my class. With a dataset from Kaggle about different diamond features, we had to obtain through feature engineering and data cleaning, a model to predict the prices of the diamonds. The objective was to develop a model with the lowest root mean squared error (rmse) possible. For my class I was the one to obtain the lowest rmse, winning the first prize.
+This project was a competition between the 26 members of my class. With a dataset from Kaggle about diamonds, we had to develop a machine learning model to predict the prices of the diamonds. The objective was to use feature engineering to develop a model with the lowest root mean squared error (rmse) possible. For my class I was the one to obtain the lowest rmse, winning the first prize.
 ![alt text](https://d500.epimg.net/cincodias/imagenes/2021/06/25/companias/1624630363_897564_1624630510_noticia_normal.jpg "Logo Title Text 1")
 
 ### First step: Data cleaning and feature engineering
